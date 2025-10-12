@@ -1,7 +1,6 @@
 /* Genel Stil */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
-  margin: 0;
+  font-family: monospace;
   background: #fafafa;
   color: #222;
   text-align: center;
@@ -26,7 +25,7 @@ header {
 }
 
 header .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
 }
 
@@ -41,7 +40,7 @@ nav ul {
 nav a {
   text-decoration: none;
   color: black;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 main {
@@ -62,12 +61,12 @@ main {
 
 .profile h2 {
   margin-top: 20px;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .profile p {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -112,7 +111,7 @@ main {
 /* Footer */
 footer {
   margin-top: auto;
-  padding-top: 50px;
+  padding-top: 10%;
   font-size: 12px;
   color: gray;
 }
