@@ -43,5 +43,14 @@ function updateLanguage() {
     });
 }
 
+function renderRoute() {
+    if (window.location.hash === "#graduation") {
+        window.location.href = "graduation_file.pdf";
+    }
+}
+
+window.addEventListener("hashchange", renderRoute);
+
 // İlk yüklemede güncelle
 updateLanguage();
+renderRoute();
