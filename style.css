@@ -1,38 +1,63 @@
 /* Genel Stil */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  min-height: 100vh;
   font-family: monospace;
   background: #fafafa;
   color: #222;
   text-align: center;
-  word-break: break-word;
-  height: 100%;
+  overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
 }
 
 /* Header */
 header {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20%;
+  gap: 12px 24px;
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
 }
 
 header .logo {
+  margin: 0;
   font-size: 22px;
   font-weight: 700;
+  white-space: nowrap;
+}
+
+#lang-toggle {
+  margin: 0;
+  white-space: nowrap;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
   margin: 0;
   padding: 0;
 }
@@ -41,64 +66,61 @@ nav a {
   text-decoration: none;
   color: black;
   font-size: 14px;
+  white-space: nowrap;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
 
 /* Responsive for mobile */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   header {
     flex-direction: column;
-    padding: 10px 5%;
-  }
-
-  .header-left {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+    padding: 16px;
   }
 
   nav a {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
 main {
   flex: 1;
+  width: 100%;
+  padding: 0 16px;
 }
 
 /* Profil Bölümü */
 .profile {
-  margin: 40px auto;
-  max-width: 800px;
+  margin: clamp(16px, 5vh, 48px) auto 0;
+  max-width: 690px;
 }
 
 .profile-img {
-  width: 240px;
-  height: 240px;
+  width: clamp(160px, 40vw, 240px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 50%;
 }
 
-.profile h2 {
-  margin-top: 20px;
-  font-size: 26px;
+.profile h1 {
+  margin: 16px 0 0;
+  font-size: clamp(22px, 5vw, 30px);
 }
 
 .profile p {
-  margin-top: 10px;
+  margin: 12px 0 0;
   font-size: 16px;
   line-height: 1.6;
 }
 
 /* Sosyal Linkler */
 .socials {
-  margin: 20px 0;
+  margin: 24px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -135,8 +157,11 @@ main {
 
 /* Footer */
 footer {
-  margin-top: auto;
-  padding-top: 8%;
+  padding: 24px 16px;
   font-size: 12px;
   color: gray;
+}
+
+footer p {
+  margin: 0;
 }
